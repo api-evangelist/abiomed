@@ -64,5 +64,17 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Abiomed is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://forgeglobal.com/abiomed_stock/
+Abiomed is a Danvers, Massachusetts medical device manufacturer and, since December 22 2022, a
+standalone business inside Johnson & Johnson MedTech. It designs, manufactures and supports the
+Impella family of percutaneous micro-axial heart pumps and the Automated Impella Controller
+console, used for temporary mechanical circulatory support in high-risk PCI and cardiogenic shock.
+
+**No public API surface.** Abiomed publishes no developer portal, no API reference, no OpenAPI or
+other machine-readable specification, no SDK on any package registry, and maintains no public
+source-code organization. Its software is two end-user products with no developer surface: the
+customer-only Impella Connect clinician portal and the Impella App. See `x-coverage` in `apis.yml`
+for the probed evidence behind that finding.
+
+- Website: https://www.heartrecovery.com/en-us
+- Impella Connect (customer login): https://www.impellaconnect.com/
+- Parent company: Johnson & Johnson (J&J MedTech)

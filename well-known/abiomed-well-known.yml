@@ -1,0 +1,132 @@
+generated: '2026-09-06'
+method: probed
+source: >-
+  live HTTP probes of abiomed.com, www.abiomed.com, www.heartrecovery.com,
+  www.impellaconnect.com and api.impellaconnect.com on 2026-09-06
+note: >-
+  No /.well-known document is served by any Abiomed host, so NO WellKnown and NO SecurityTxt
+  pointer is wired in apis.yml — this file records an absence, not a presence. abiomed.com and
+  www.abiomed.com answer every path with a 301 into https://www.heartrecovery.com/en-us (the
+  brand's live site since the Johnson & Johnson MedTech transition), and www.heartrecovery.com
+  (Drupal) returns honest 404s. www.impellaconnect.com is the customer-only Impella Connect
+  portal, an Angular single-page app whose catch-all answers HTTP 200 with the same
+  `<!doctype html><html lang="en" class="h-100">` shell for EVERY /.well-known/* path including
+  /openapi.json, /swagger.json and /llms.txt — those 200s are the SPA shell, not documents, and
+  are recorded here as misses so a later run does not mistake them for served files.
+  api.impellaconnect.com resolves (4.157.244.59) and routes — /api-docs returns a real empty 404 —
+  but every other path returns an nginx 502, so it is a private portal backend rather than a
+  published API. /.well-known/agent-card.json and /.well-known/agent.json were probed on the same
+  five hosts with the same results (301 / 404 / SPA-shell 200 / 502); no JSON object with AgentCard
+  shape was returned anywhere, so no a2a/ artifact and no AgentCard pointer was written.
+hosts:
+- host: https://abiomed.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 301
+    content_type: text/html
+    note: HTML shell, not a document
+  - path: /.well-known/openid-configuration
+    status: 301
+    content_type: text/html
+    note: HTML shell, not a document
+  - path: /.well-known/oauth-authorization-server
+    status: 301
+    content_type: text/html
+    note: HTML shell, not a document
+  - path: /.well-known/api-catalog
+    status: 301
+    content_type: text/html
+    note: HTML shell, not a document
+  - path: /.well-known/ai-plugin.json
+    status: 301
+    content_type: text/html
+    note: HTML shell, not a document
+- host: https://www.abiomed.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 301
+    content_type: text/html
+    note: HTML shell, not a document
+  - path: /.well-known/openid-configuration
+    status: 301
+    content_type: text/html
+    note: HTML shell, not a document
+  - path: /.well-known/oauth-authorization-server
+    status: 301
+    content_type: text/html
+    note: HTML shell, not a document
+  - path: /.well-known/api-catalog
+    status: 301
+    content_type: text/html
+    note: HTML shell, not a document
+  - path: /.well-known/ai-plugin.json
+    status: 301
+    content_type: text/html
+    note: HTML shell, not a document
+- host: https://www.heartrecovery.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    content_type: text/html
+    note: HTML shell, not a document
+  - path: /.well-known/openid-configuration
+    status: 404
+    content_type: text/html
+    note: HTML shell, not a document
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    content_type: text/html
+    note: HTML shell, not a document
+  - path: /.well-known/api-catalog
+    status: 404
+    content_type: text/html
+    note: HTML shell, not a document
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    content_type: text/html
+    note: HTML shell, not a document
+- host: https://www.impellaconnect.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    content_type: text/html
+    note: HTML shell, not a document
+  - path: /.well-known/openid-configuration
+    status: 200
+    content_type: text/html
+    note: HTML shell, not a document
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    content_type: text/html
+    note: HTML shell, not a document
+  - path: /.well-known/api-catalog
+    status: 200
+    content_type: text/html
+    note: HTML shell, not a document
+  - path: /.well-known/ai-plugin.json
+    status: 200
+    content_type: text/html
+    note: HTML shell, not a document
+- host: https://api.impellaconnect.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 502
+    content_type: text/html
+    note: HTML shell, not a document
+  - path: /.well-known/openid-configuration
+    status: 502
+    content_type: text/html
+    note: HTML shell, not a document
+  - path: /.well-known/oauth-authorization-server
+    status: 502
+    content_type: text/html
+    note: HTML shell, not a document
+  - path: /.well-known/api-catalog
+    status: 502
+    content_type: text/html
+    note: HTML shell, not a document
+  - path: /.well-known/ai-plugin.json
+    status: 502
+    content_type: text/html
+    note: HTML shell, not a document
+
