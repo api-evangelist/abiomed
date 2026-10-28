@@ -64,17 +64,82 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Abiomed is a Danvers, Massachusetts medical device manufacturer and, since December 22 2022, a
-standalone business inside Johnson & Johnson MedTech. It designs, manufactures and supports the
-Impella family of percutaneous micro-axial heart pumps and the Automated Impella Controller
-console, used for temporary mechanical circulatory support in high-risk PCI and cardiogenic shock.
+Abiomed is a Danvers, Massachusetts medical device manufacturer and, since December 22 2022, a standalone business inside Johnson & Johnson MedTech, which acquired it for approximately $16.6 billion. The company designs, manufactures and supports the Impella family of percutaneous micro-axial heart pumps — Impella CP, 5.5, RP Flex and the SmartAssist sensor line — used for temporary mechanical circulatory support during high-risk percutaneous coronary intervention and in cardiogenic shock, alongside the Automated Impella Controller console, the Breethe OXY-1 ECMO system and the Impella Connect remote case-review service. Its product is regulated hardware sold to hospitals and cath labs, supported by a 24/7 clinical support centre, not software sold to developers. Abiomed's digital surface is limited to two end-user products: Impella Connect, a customer-only clinician portal that receives one-way RTMPS video of the console screen over port 443, and the Impella App for clinical reference. Abiomed publishes no developer portal, no API reference, no OpenAPI or other machine-readable specification, no SDK on npm, PyPI or any other registry, and maintains no public source-code organisation; the corporate site abiomed.com now redirects to the brand site at heartrecovery.com.
 
-**No public API surface.** Abiomed publishes no developer portal, no API reference, no OpenAPI or
-other machine-readable specification, no SDK on any package registry, and maintains no public
-source-code organization. Its software is two end-user products with no developer surface: the
-customer-only Impella Connect clinician portal and the Impella App. See `x-coverage` in `apis.yml`
-for the probed evidence behind that finding.
+**Areas:** Company · Medical Devices · Healthcare · Cardiology · Mechanical Circulatory Support · Heart Pumps · Medical Technology · Hospitals · Clinical Support · Life Sciences
 
-- Website: https://www.heartrecovery.com/en-us
-- Impella Connect (customer login): https://www.impellaconnect.com/
-- Parent company: Johnson & Johnson (J&J MedTech)
+## Abiomed on APIs.io
+
+Everything profiled for Abiomed is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/abiomed/](https://apis.io/providers/abiomed/)** — or go straight to one of the APIs or properties below.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Security (1)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Abiomed Domain Security](https://apis.io/security/abiomed/abiomed-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.heartrecovery.com/en-us)
+- [Support](https://www.heartrecovery.com/en-us/contact-us)
+- [Terms of service](https://www.heartrecovery.com/en-us/terms-of-use)
+- [Privacy policy](https://www.heartrecovery.com/en-us/privacy-policy)
+
+## API Evangelist rating
+
+**Kin Score 11.1** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 48.2 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 4.8 |
+| Access clarity | 27.6 |
+
+**Agent readiness 0.0** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 10.9** — Health
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/abiomed/](https://apis.io/providers/abiomed/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Abiomed: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/abiomed/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
